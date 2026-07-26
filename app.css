@@ -1,0 +1,893 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #fafafa;
+    color: #45474f;
+    overflow-x: hidden;
+}
+
+/* Colors */
+:root {
+    --primary: #5a39d4;
+    --dark: #1e1f20;
+    --light: #fafafa;
+    --text: #45474f;
+}
+
+.color-primary {
+    color: var(--primary);
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--dark);
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: clamp(40px, 5vw, 80px);
+}
+
+h2 {
+    font-size: clamp(32px, 4vw, 60px);
+}
+
+h3 {
+    font-size: clamp(24px, 3vw, 45px);
+}
+
+h4 {
+    font-size: clamp(18px, 2vw, 32px);
+}
+
+h5 {
+    font-size: clamp(16px, 1.5vw, 24px);
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: 0.3s ease;
+}
+
+/* Header */
+header {
+    background: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    padding: 1.5rem 0;
+}
+
+.brand-logo {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.navbar-nav .nav-link {
+    font-weight: 600;
+    color: var(--dark);
+    margin-left: 20px;
+    transition: 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--primary);
+}
+
+.btn-contact {
+    background: var(--primary);
+    color: white !important;
+    padding: 10px 20px;
+    border-radius: 6px;
+    margin-left: 10px;
+}
+
+.btn-contact:hover {
+    background: #4a2fa8;
+}
+
+/* Buttons */
+.btn-primary {
+    background: var(--primary);
+    border: none;
+    padding: 12px 32px;
+    border-radius: 6px;
+    font-weight: 600;
+    color: white;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background: #4a2fa8;
+    color: white;
+}
+
+.btn-explore {
+    background: var(--primary);
+    color: white;
+    padding: 12px 40px;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+.btn-explore:hover {
+    background: #4a2fa8;
+    color: white;
+}
+
+.btn-read-more {
+    color: var(--dark);
+    font-weight: 600;
+    border-bottom: 2px solid var(--primary);
+    padding-bottom: 5px;
+    transition: 0.3s;
+}
+
+.btn-read-more:hover {
+    color: var(--primary);
+}
+
+/* Hero Section */
+.hero-section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #f5f7fa 0%, #ffffff 100%);
+}
+
+.hero-title {
+    font-size: clamp(40px, 5vw, 70px);
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 20px;
+    color: var(--dark);
+}
+
+.hero-icon {
+    display: inline-block;
+    font-size: 60px;
+    margin: 0 10px;
+}
+
+.hero-text {
+    font-size: 16px;
+    color: var(--text);
+    margin-bottom: 30px;
+    max-width: 500px;
+}
+
+.hero-images {
+    position: relative;
+    height: 500px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 20px;
+}
+
+.hero-img {
+    height: 100%;
+    border-radius: 30px;
+    object-fit: cover;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.img-1 {
+    width: 20%;
+    height: 70%;
+}
+
+.img-2 {
+    width: 25%;
+    height: 100%;
+}
+
+.img-3 {
+    width: 20%;
+    height: 75%;
+}
+
+.img-4 {
+    width: 22%;
+    height: 90%;
+}
+
+/* Flight Search Section */
+.flight-search-section {
+    background: white;
+    padding: 40px 0;
+}
+
+.flight-search-box {
+    background: white;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.nav-tabs {
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.nav-tabs .nav-link {
+    color: var(--text);
+    font-weight: 600;
+    border: none;
+    padding: 12px 20px;
+    border-bottom: 3px solid transparent;
+}
+
+.nav-tabs .nav-link.active {
+    color: var(--primary);
+    border-bottom-color: var(--primary);
+}
+
+.sub-tabs {
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 15px;
+}
+
+.sub-tabs .nav-link {
+    color: var(--text);
+    font-weight: 600;
+    padding: 0 15px;
+}
+
+.sub-tabs .nav-link.active {
+    color: var(--primary);
+    border-bottom: 2px solid var(--primary);
+}
+
+.btn-flight-status {
+    background: var(--primary);
+    color: white !important;
+    padding: 10px 20px;
+    border-radius: 6px;
+}
+
+.btn-show-flight {
+    background: var(--primary);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    width: 100%;
+}
+
+.btn-show-flight:hover {
+    background: #4a2fa8;
+}
+
+.form-control {
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 10px 15px;
+    font-size: 14px;
+}
+
+.form-control:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 0.2rem rgba(90, 57, 212, 0.15);
+}
+
+/* Benefits Section */
+.benefits-section {
+    background: white;
+    padding: 60px 0;
+}
+
+.benefit-card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+}
+
+.benefit-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.benefit-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+    background: linear-gradient(135deg, var(--primary) 0%, #7c5cdb 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 40px;
+}
+
+.benefit-card h5 {
+    margin-bottom: 15px;
+}
+
+.benefit-card p {
+    font-size: 14px;
+}
+
+/* About Section */
+.about-section {
+    background: white;
+}
+
+.section-title {
+    font-size: clamp(32px, 4vw, 60px);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.section-text {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--text);
+}
+
+.about-images {
+    position: relative;
+    height: 500px;
+}
+
+.about-main-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.about-overlay-img {
+    position: absolute;
+    border-radius: 30px;
+    object-fit: cover;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.about-overlay-1 {
+    width: 200px;
+    height: 200px;
+    bottom: 20px;
+    left: 0;
+}
+
+.about-overlay-2 {
+    width: 200px;
+    height: 200px;
+    top: 20px;
+    right: 0;
+}
+
+/* Tours Section */
+.tours-section {
+    background: white;
+}
+
+.section-subtitle {
+    font-size: 16px;
+    color: var(--text);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.tour-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+}
+
+.tour-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+.tour-image {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.tour-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.3s;
+}
+
+.tour-card:hover .tour-image img {
+    transform: scale(1.05);
+}
+
+.tour-favorite {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 45px;
+    height: 45px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    color: #ccc;
+    transition: 0.3s;
+}
+
+.tour-favorite:hover {
+    color: #e74c3c;
+    transform: scale(1.1);
+}
+
+.tour-content {
+    padding: 20px;
+}
+
+.tour-location {
+    color: var(--text);
+    font-size: 14px;
+}
+
+.tour-location i {
+    color: var(--primary);
+    margin-right: 5px;
+}
+
+.tour-stars {
+    color: #ffc107;
+    font-size: 14px;
+    letter-spacing: 5px;
+}
+
+.tour-footer {
+    margin-top: 15px;
+}
+
+.tour-footer p {
+    font-size: 14px;
+    color: var(--text);
+}
+
+.tour-footer i {
+    margin-right: 8px;
+    color: var(--primary);
+}
+
+.btn-book {
+    background: var(--primary);
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    transition: 0.3s;
+}
+
+.btn-book:hover {
+    background: #4a2fa8;
+    transform: scale(1.1);
+}
+.tour-footer h5 {
+    font-size: 1rem;   /* decrease size */
+    font-weight: 600;
+    white-space: nowrap;
+}
+.tour-footer h5 {
+    font-size: 0.9rem;
+}
+/* Testimonials Section */
+.testimonials-section {
+    background: white;
+}
+
+.testimonial-card {
+    background: #f9f9f9;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+    height: 100%;
+}
+
+.testimonial-text {
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--text);
+}
+
+.testimonial-author {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.testimonial-author img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.testimonial-author h6 {
+    margin: 0;
+    font-size: 14px;
+}
+
+.stars {
+    color: #ffc107;
+    font-size: 12px;
+    letter-spacing: 3px;
+}
+
+/* Happy Travelers Section */
+.happy-travelers-section {
+    background: white;
+}
+
+.travelers-count {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.travelers-avatars {
+    display: flex;
+    gap: -10px;
+}
+
+.travelers-avatars img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 3px solid white;
+    margin-left: -15px;
+    object-fit: cover;
+}
+
+.travelers-avatars img:first-child {
+    margin-left: 0;
+}
+
+.travelers-img {
+    width: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.experience-text {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.experience-list {
+    list-style: none;
+    padding: 0;
+}
+
+.experience-list li {
+    padding: 8px 0;
+    color: var(--text);
+}
+
+.experience-list i {
+    color: var(--primary);
+    margin-right: 10px;
+}
+
+/* News Section */
+.news-section {
+    background: white;
+}
+
+.news-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+}
+
+.news-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.news-image {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.news-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.3s;
+}
+
+.news-card:hover .news-image img {
+    transform: scale(1.05);
+}
+
+.news-content {
+    padding: 25px;
+}
+
+.news-date {
+    font-size: 13px;
+    color: var(--text);
+    margin-bottom: 12px;
+}
+
+.news-date i {
+    color: var(--primary);
+    margin-right: 5px;
+}
+
+/* Newsletter Section */
+.newsletter-section {
+    background: linear-gradient(135deg, #f5f7fa 0%, #ffffff 100%);
+    padding: 60px 0;
+}
+
+.newsletter-title {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 20px;
+}
+
+.newsletter-form {
+    margin-top: 20px;
+}
+
+.newsletter-form .input-group {
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.newsletter-form .form-control {
+    border: none;
+    padding: 14px 20px;
+    border-radius: 0;
+}
+
+.newsletter-form .btn {
+    border: none;
+    padding: 14px 30px;
+    border-radius: 0;
+}
+
+.newsletter-img,
+.newsletter-map {
+    border-radius: 20px;
+    max-width: 100%;
+}
+
+/* Footer */
+.footer-section {
+    background: #1e1f20;
+    color: white;
+}
+
+.footer-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.footer-text {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #aaa;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    width: 45px;
+    height: 45px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    background: var(--primary);
+    transform: translateY(-5px);
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    color: #aaa;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: var(--primary);
+}
+
+.footer-contact {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-contact li {
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: #aaa;
+    display: flex;
+    gap: 10px;
+}
+
+.footer-contact i {
+    color: var(--primary);
+    min-width: 20px;
+}
+
+.footer-contact a {
+    color: #aaa;
+}
+
+.footer-contact a:hover {
+    color: var(--primary);
+}
+
+.footer-bottom {
+    color: #666;
+    font-size: 14px;
+    border-top-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .hero-images {
+        margin-top: 40px;
+    }
+
+    .about-overlay-img {
+        display: none;
+    }
+
+    .newsletter-map {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-images {
+        height: 350px;
+    }
+
+    .img-1, .img-2, .img-3, .img-4 {
+        width: 25%;
+    }
+
+    .tour-card {
+        margin-bottom: 20px;
+    }
+
+    .travelers-count {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .newsletter-section {
+        text-align: center;
+    }
+
+    .newsletter-img {
+        margin-bottom: 20px;
+    }
+
+    .footer-section .row {
+        text-align: center;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+
+    .footer-contact {
+        text-align: center;
+    }
+}
+
+/* Spacing Utilities */
+.mt-5 {
+    margin-top: 3rem;
+}
+
+.mb-3 {
+    margin-bottom: 1rem;
+}
+
+.mb-4 {
+    margin-bottom: 1.5rem;
+}
+
+.mb-5 {
+    margin-bottom: 3rem;
+}
+
+.my-5 {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.pt-5 {
+    padding-top: 3rem;
+}
+
+.py-5 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.g-4 {
+    gap: 1.5rem;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #e0e0e0;
+    margin: 1.5rem 0;
+}
+
+.color-bends-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
